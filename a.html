@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Supermercado</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <table>
+   <table>
+  <tr>
+    <th colspan="3">Productos</th>
+   
+  </tr>
+  <tr>
+    <td> 
+	<img src="arrozzz.png">
+	<br>
+	<p>ARROZ DIANA 1kg</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="1"/>
+</td>
+
+    <td>
+	 <img src="frijol.jpg">
+	<br>
+	<p>FRIJOL 500g</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="2"/>
+    </td>
+    
+
+     <td>
+	 <img src="lenteja.png">
+	<br>
+	<p>LENTEJA 1kg</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="3"/>
+    </td>
+  </tr>
+ <tr>
+  <td>
+	 <img src="axe.png">
+	<br>
+	<p>DESODORANTE AXE</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="4"/>
+    </td>
+	
+  <td>
+	 <img src="old.png">
+	<br>
+	<p>DESODORANTE OLD SPICE</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="5"/>
+    </td>
+
+   <td>
+	 <img src="rexona.png">
+	<br>
+	<p>DESODORANTE REXONA</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="6"/>
+    </td>
+</tr>
+ 
+</table>
+  </table>
+
+  <form action="/my-handling-form-page" method="post">
+    <ul>
+      <li>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="user_name" />
+      </li>
+      <li>
+        <label for="mail">Email: </label>
+        <input type="email" id="mail" name="user_mail" />
+      </li>
+      <li>
+      <label for="name">Celular:</label>
+        <input type="text" id="name" name="user_number" />
+      </li>
+        <li>
+      <label for="direccion">Direccion:</label>
+        <input type="text" id="name" name="user_number" />
+      </li>
+    </ul>
+  </form>
+
+  <fieldset>
+    <legend>MEDIO DE PAGO:</legend>
+    <div>
+      <input type="radio" id="efectivo" name="pago" value="efectivo" checked />
+      <label for="efectivo">Efectivo</label>
+    </div>
+    <div>
+      <input type="radio" id="tarjeta" name="pago" value="tarjeta" />
+      <label for="tarjeta">Tarjeta de credito</label>
+    </div>
+    <div>
+      <input type="radio" id="pse" name="pago" value="pselouie" />
+      <label for="pse">PSE</label>
+    </div>
+  </fieldset>
+
+  <button onclick="generarRecibo()">Generar Recibo</button>
+
+  <div id="recibo"></div>
+
+  <script>
+    function generarRecibo() {
+      var reciboHTML = "<h2>Recibo:</h2>";
+
+      // Obtener los productos seleccionados
+      var productosSeleccionados = [];
+      var checkboxes = document.getElementsByName("producto");
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          productosSeleccionados.push(checkboxes[i].value);
+        }
+      }
+      reciboHTML += "<p>Productos: " + productosSeleccionados.join(", ") + "</p>";
+
+      // Obtener el medio de pago seleccionado
+      var medioDePago = document.querySelector('input[name="pago"]:checked').value;
+      reciboHTML += "<p>Medio de Pago: " + medioDePago + "</p>";
+
+      // Obtener los datos del formulario
+      var nombre = document.getElementById("name").value;
+      var email = document.getElementById("mail").value;
+      var celular = document.getElementById("name").value;
+      var direccion = document.getElementById("name").value;
+      reciboHTML += "<p>Nombre: " + nombre + "</p>";
+      reciboHTML += "<p>Email: " + email + "</p>";
+      reciboHTML += "<p>Celular: " + celular + "</p>";
+      reciboHTML += "<p>Direccion: " + direccion + "</p>";
+
+      // Mostrar el recibo en el elemento con id "recibo"
+      document.getElementById("recibo").innerHTML = reciboHTML;
+    }
+  </script>
+</body>
+
+</html>

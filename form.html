@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Supermercado</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<table>
+  <tr>
+    <th colspan="3">Productos</th>
+   
+  </tr>
+  <tr>
+    <td> 
+	<img src="arrozzz.png">
+	<br>
+	<p>ARROZ DIANA 1kg</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="1"/>
+</td>
+
+    <td>
+	 <img src="frijol.jpg">
+	<br>
+	<p>FRIJOL 500g</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="2"/>
+    </td>
+    
+
+     <td>
+	 <img src="lenteja.png">
+	<br>
+	<p>LENTEJA 1kg</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="3"/>
+    </td>
+  </tr>
+ <tr>
+  <td>
+	 <img src="axe.png">
+	<br>
+	<p>DESODORANTE AXE</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="4"/>
+    </td>
+	
+  <td>
+	 <img src="old.png">
+	<br>
+	<p>DESODORANTE OLD SPICE</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="5"/>
+    </td>
+
+   <td>
+	 <img src="rexona.png">
+	<br>
+	<p>DESODORANTE REXONA</p>
+	<input type="checkbox" id="producto" name="producto" 
+	value="6"/>
+    </td>
+</tr>
+ 
+</table>
+
+  <form action="/my-handling-form-page" method="post">
+    <ul>
+      <li>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="user_name" />
+      </li>
+      <li>
+        <label for="mail">Email: </label>
+        <input type="email" id="mail" name="user_mail" />
+      </li>
+      <li>
+      <label for="name">Celular:</label>
+        <input type="text" id="name" name="user_number" />
+      </li>
+        <li>
+      <label for="direccion">Direccion:</label>
+        <input type="text" id="name" name="user_number" />
+      </li>
+    </ul>
+  </form>
+<fieldset>
+  <legend>MEDIO DE PAGO:</legend>
+
+  <div>
+    <input type="radio" id="efectivo" name="efectivo" value="efectivo" checked />
+    <label for="efectivo">Efectivo</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Dewey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Louie</label>
+  </div>
+</fieldset>
+  <script src="script.js"></script>
+</body>
+
+</html>
