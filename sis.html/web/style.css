@@ -1,0 +1,18 @@
+body{
+background-color:AntiqueWhite;
+}
+
+img {
+  height: 200px;
+  
+}
+
+table,th,td {
+ border: 1px solid;
+ background-color:#cfc8b8;
+}
+
+p{
+  
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Recibo</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="recibo">
+    <!-- El recibo se generará aquí -->
+  </div>
+
+  <script>
+    // Obtener los parámetros de la URL
+    var urlParams = new URLSearchParams(window.location.search);
+    var reciboHTML = urlParams.get('recibo');
+
+    // Mostrar el recibo en el elemento con id "recibo"
+    document.getElementById("recibo").innerHTML = reciboHTML;
+  </script>
+</body>
+
+</html>
+

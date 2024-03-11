@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Supermercado</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    
+ <table>
+    <tr>
+      <th colspan="4">Productos</th>
+    </tr>
+    <tr>
+      <td> 
+        <img src="https://grupodiana.co/wp-content/uploads/2021/05/arroz_premium.png">
+        <br>
+        <p>ARROZ DIANA 1kg</p>
+        <p>Precio: $5170</p>
+        <input type="checkbox" id="producto" name="producto" value="Arroz" data-precio="5170"/>
+       
+      </td>
+
+      <td>
+        <img src="https://i0.wp.com/norkafan.com/wp-content/uploads/2020/10/frijol-bolaroja-1.png?fit=500%2C550&ssl=1">
+        <br>
+        <p>FRIJOL 500g</p>
+        <p>Precio: $9590</p>
+        <input type="checkbox" id="producto" name="producto" value="Frijol" data-precio="9590"/>
+      </td>
+
+      <td>
+        <img src="https://www.tiendaedexa.com/10401-home_default/lenteja-diana-x-1000-grs.jpg">
+        <br>
+        <p>LENTEJA 1kg</p>
+        <p>Precio: $3300</p>
+        <input type="checkbox" id="producto" name="producto" value="Lenteja" data-precio="3300"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="https://perfumerialamundial.cl/cdn/shop/files/112867554_cd9aafb7-c4ec-4d2a-944b-a076f8d93eb8_1024x1024.png?v=1700751137">
+        <br>
+        <p>DESODORANTE AXE</p>
+        <p>Precio: $20500</p>
+        <input type="checkbox" id="producto" name="producto" value="Axe" data-precio="20500"/>
+      </td>
+      
+      <td>
+        <img src="https://maxitenjo.com.co/cdn/shop/products/barra-desodorante-wolfthorn-1_800x.png?v=1596737938">
+        <br>
+        <p>DESODORANTE OLD SPICE</p>
+        <p>Precio: $18200</p>
+        <input type="checkbox" id="producto" name="producto" value="OldSpice" data-precio="18200"/>
+      </td>
+
+      <td>
+        <img src="https://cdn.sanity.io/images/27438tds/rexona-prod-co/0fae96d58d61150e0896a0fc7414780f21d623e8-5000x5000.tif">
+        <br>
+        <p>DESODORANTE REXONA</p>
+        <p>Precio: $9500</p>
+        <input type="checkbox" id="producto" name="producto" value="Rexona" data-precio="9500"/>
+      </td>
+    </tr>
+  </table>
+
+  <form action="/my-handling-form-page" method="post">
+    <ul>
+      <li>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="user_name" />
+      </li>
+      <li>
+        <label for="mail">Email: </label>
+        <input type="email" id="mail" name="user_mail" />
+      </li>
+      <li>
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" name="user_celular" />
+      </li>
+      <li>
+        <label for="direccion">Direccion:</label>
+        <input type="text" id="direccion" name="user_address" />
+      </li>
+    </ul>
+  </form>
+
+  <fieldset>
+    <legend>MEDIO DE PAGO:</legend>
+    <div>
+      <input type="radio" id="efectivo" name="pago" value="efectivo" checked />
+      <label for="efectivo">Efectivo</label>
+    </div>
+    <div>
+      <input type="radio" id="tarjeta" name="pago" value="tarjeta" />
+      <label for="tarjeta">Tarjeta de credito</label>
+    </div>
+    <div>
+      <input type="radio" id="pse" name="pago" value="pse" />
+      <label for="pse">PSE</label>
+    </div>
+  </fieldset>
+
+ <button onclick="generarRecibo()">Generar Recibo</button>
+ <script src="script.js"></script>
+</body>
+
+</html>
